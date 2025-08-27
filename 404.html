@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>404 not found - 404FoundYou</title>
+  <meta name="description" content="Oops - this page pulled a Bigfoot.">
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light dark">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen grid place-items-center bg-gray-50 text-gray-900 antialiased">
+  <main class="max-w-xl mx-auto p-8 bg-white border rounded-2xl shadow-sm text-center">
+    <h1 class="text-4xl font-bold">404 not found</h1>
+    <p class="mt-2 text-sm text-gray-600">Plot twist - you found a 404.</p>
+
+    <div class="mt-6 p-4 rounded-xl bg-gray-100 border">
+      <p id="dadline" class="text-gray-800"></p>
+    </div>
+
+    <nav class="mt-8 grid gap-3">
+      <a class="inline-block px-5 py-3 rounded-2xl bg-gray-900 text-white text-sm font-medium" href="/">Go home</a>
+      <div class="flex items-center gap-2 justify-center text-sm">
+        <a class="underline" href="/essays/">Read essays</a>
+        <span aria-hidden="true">·</span>
+        <a class="underline" href="/consultations/">Book a consult</a>
+        <span aria-hidden="true">·</span>
+        <a class="underline" href="/contact/">Contact</a>
+      </div>
+    </nav>
+
+    <form id="searchForm" class="mt-8 flex gap-2" role="search" aria-label="Site search">
+      <input class="flex-1 border rounded-xl px-3 py-2" name="q" type="search" placeholder="Search the site" required>
+      <button class="px-4 py-2 rounded-xl border bg-white text-sm font-medium" type="submit">Search</button>
+    </form>
+
+    <p class="mt-6 text-xs text-gray-500">
+      Tip - try a different path or use the search. If you see Bigfoot, tell him this page is looking for him too.
+    </p>
+  </main>
+
+  <script>
+    // Dad-joke lines - PNW flavored and hyphen friendly
+    const lines = [
+      "This page went to make coffee - it will be back right after the spin cycle.",
+      "Like Bigfoot, this URL is famous - and still hard to find.",
+      "Bad news - the page is missing. Good news - you found a great sense of direction.",
+      "This link took a left at Albuquerque - classic move.",
+      "404FoundYou is a brand - this page did not get the memo.",
+      "If a page falls in the forest and no one can load it - does it still count as content?",
+      "We checked under the couch cushions - only found extra crumbs and a mysterious Lego."
+    ];
+    document.getElementById("dadline").textContent =
+      lines[Math.floor(Math.random() * lines.length)];
+
+    // DuckDuckGo site search
+    document.getElementById("searchForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const q = new URLSearchParams();
+      q.set("q", "site:404foundyou.github.io " + this.q.value.trim());
+      location.href = "https://duckduckgo.com/?" + q.toString();
+    });
+  </script>
+</body>
+</html>
