@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://404foundyou.github.io/sitemap.xml
