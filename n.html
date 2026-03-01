@@ -27,71 +27,67 @@
     <p style="text-align: center; color: #888;">'Native Americans worshipped the land; the Technocracy harvests the data from it.' – UNREDACTED (03/01/2026)</p>
     
 <div class="mermaid">
+%%{init: {'flowchart': {'htmlLabels': true}}}%%
 graph TD
-    %% Historical Geopolitical Roots (Left)
-    A[The 1917 Seed<br/>(Balfour to Rothschild)]:::rectstandard --> B[The UN Pivot<br/>(1947 Partition / Truman)]:::rectstandard
-    B -- Strategic Shift<br/>Post-Holocaust --> G[Establishment of Israel]:::rectstandard
-
-    %% Modern Power Management (Center)
-    B --> C[US Executive Lab<br/>(Technocracy Shift)]:::rectstandard
-    H{Global Management<br/>Architects} --> C
-    
-    %% Architects
-    Bilder[Bilderberg Group]:::rectstandard --> H
-    WEF[WEF / Klaus Schwab]:::rectstandard --> H
-    K_R[Kissinger/Rockefeller]:::rectstandard --> H
-
-    %% The Computing Grid (Right)
-    D[JAPAN<br/>(Largest Foreign US Debt Holder)]:::rectstandard --> E[SoftBank<br/>(Masayoshi Son)]:::rectstandard
-    E -- Controls ARM Chips --> Grid[PROJECT STARGATE 2025<br/>The New Grid]:::rectstandard
-    
-    %% Stargate Partners
-    Grid -- Compute --> OAI[OpenAI / AGI Models]:::rectstandard
-    Grid -- Azure Cloud --> MS[Microsoft / OS]:::rectstandard
-
-    %% The Pivot to Warfare (Path A vs B)
-    C --> Mil[US Military/War Dept<br/>(Pete Hegseth)]:::rectstandard
-    
-    %% Path A: Compliance
-    Mil -- PATH A<br/>COMPLIANCE --> Fury
-    
-    Fury((CURRENT ACTION:<br/>Operation Epic Fury<br/>Feb 28, 2026)):::actionNode
-    OAI --> Fury
-    MS --> Fury
-
-    %% Path B: The Ideological Purge (Claude) - HIGH EMPHASIS RED
-    Mil -- PATH B<br/>IDEOLOGICAL PURGE --> Claude
-    
-    %% High-emphasis label - CEO Refusal
-    ClaudeRefusal[CEO DARIO AMODEI REFUSES MILITARY USE<br/>for Autonomous Weapons & Mass Surveillance]:::recttacticalLabel
-    ClaudeRefusal --> Claude
-    
-    Claude[ANTHROPIC / CLAUDE AI<br/>Initially Deployed]:::rectironyLabel 
-    
-    %% The Ironic Pretext
-    Claude -- CEO Refusal --> IronicPretext{THE RIDICULOUS PRETEXT}:::rectironyLabel
-    
-    IronicPretext -- Hegseth labels Claude a<br/>Supply Chain Risk to exclude them --> Exclusion[EXCLUSION<br/>Claude Purged from Systems]:::rectironyLabel
-    
-    %% The Irony Blurb
-    IronicBlurb[IRONIC PRETEXT:<br/>USED SUPPLY CHAIN<br/>TO MASK<br/>IDEOLOGICAL EXCLUSION]:::recttacticalLabel
-    IronicBlurb -.-> Exclusion
-
-    %% Data Siphoning (Bottom)
-    Grid --> Samsung[Samsung/Big Tech TOS<br/>AI Enhanced Features]:::rectstandard
-    Samsung -- Irrevocable License to Data --> Siphon[USER METADATA<br/>AGI Training]:::rectstandard
-    Siphon --> Pop[Population You]:::rectstandard
-
-    %% The Contrast (Bottom Right)
-    Aaron[Aaron Swartz<br/>Persecuted for Open Data]:::rectstandard -.-> Contrast[THE CONTRAST]:::rectstandard
-    Grid -.-> Scraping[Stargate<br/>Scraping Web for Private Profit]:::rectstandard
-    Scraping -.-> Contrast
-
-    %% Styling for High Emphasis and Red/Yellow
     classDef recttacticalLabel fill:#ffcc00,stroke:#fff,stroke-width:2px,color:#121212,font-weight:bold;
     classDef rectironyLabel fill:#b30000,stroke:#fff,stroke-width:3px,color:#fff,font-weight:bold;
     classDef actionNode stroke:#ffcc00,stroke-width:4px,fill:#000,color:#ffcc00,font-weight:bold;
     classDef rectstandard fill:#1e1e1e,stroke:#4a90e2,stroke-width:2px,color:#fff;
+
+    %% Historical Geopolitical Roots (Left)
+    A["The 1917 Seed<br/>(Balfour to Rothschild)"]:::rectstandard --> B["The UN Pivot<br/>(1947 Partition / Truman)"]:::rectstandard
+    B -- "Strategic Shift<br/>Post-Holocaust" --> G["Establishment of Israel"]:::rectstandard
+
+    %% Modern Power Management (Center)
+    B --> C["US Executive Lab<br/>(Technocracy Shift)"]:::rectstandard
+    H{"Global Management<br/>Architects"} --> C
+    
+    %% Architects
+    Bilder["Bilderberg Group"]:::rectstandard --> H
+    WEF["WEF / Klaus Schwab"]:::rectstandard --> H
+    K_R["Kissinger/Rockefeller"]:::rectstandard --> H
+
+    %% The Computing Grid (Right)
+    D["JAPAN<br/>(Largest Foreign US Debt Holder)"]:::rectstandard --> E["SoftBank<br/>(Masayoshi Son)"]:::rectstandard
+    E -- "Controls ARM Chips" --> Grid["PROJECT STARGATE 2025<br/>The New Grid"]:::rectstandard
+    
+    %% Stargate Partners
+    Grid -- "Compute" --> OAI["OpenAI / AGI Models"]:::rectstandard
+    Grid -- "Azure Cloud" --> MS["Microsoft / OS"]:::rectstandard
+
+    %% The Pivot to Warfare (Path A vs B)
+    C --> Mil["US Military/War Dept<br/>(Pete Hegseth)"]:::rectstandard
+    
+    %% Path A: Compliance
+    Mil -- "PATH A<br/>COMPLIANCE" --> Fury["CURRENT ACTION:<br/>Operation Epic Fury<br/>Feb 28, 2026"]:::actionNode
+    OAI --> Fury
+    MS --> Fury
+
+    %% Path B: The Ideological Purge (Claude) - HIGH EMPHASIS RED
+    Mil -- "PATH B<br/>IDEOLOGICAL PURGE" --> Claude["ANTHROPIC / CLAUDE AI<br/>Initially Deployed"]:::rectironyLabel
+    
+    %% High-emphasis label - CEO Refusal
+    ClaudeRefusal["CEO DARIO AMODEI REFUSES MILITARY USE<br/>for Autonomous Weapons & Mass Surveillance"]:::recttacticalLabel
+    ClaudeRefusal --> Claude
+    
+    %% The Ironic Pretext
+    Claude -- "CEO Refusal" --> IronicPretext{"THE RIDICULOUS PRETEXT"}:::rectironyLabel
+    
+    IronicPretext -- "Hegseth labels Claude a<br/>Supply Chain Risk to exclude them" --> Exclusion["EXCLUSION<br/>Claude Purged from Systems"]:::rectironyLabel
+    
+    %% The Irony Blurb
+    IronicBlurb["IRONIC PRETEXT:<br/>USED SUPPLY CHAIN<br/>TO MASK<br/>IDEOLOGICAL EXCLUSION"]:::recttacticalLabel
+    IronicBlurb -.-> Exclusion
+
+    %% Data Siphoning (Bottom)
+    Grid --> Samsung["Samsung/Big Tech TOS<br/>AI Enhanced Features"]:::rectstandard
+    Samsung -- "Irrevocable License to Data" --> Siphon["USER METADATA<br/>AGI Training"]:::rectstandard
+    Siphon --> Pop["Population You"]:::rectstandard
+
+    %% The Contrast (Bottom Right)
+    Aaron["Aaron Swartz<br/>Persecuted for Open Data"]:::rectstandard -.-> Contrast["THE CONTRAST"]:::rectstandard
+    Grid -.-> Scraping["Stargate<br/>Scraping Web for Private Profit"]:::rectstandard
+    Scraping -.-> Contrast
 </div>
 </body>
 </html>
