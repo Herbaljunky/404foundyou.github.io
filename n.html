@@ -2,92 +2,94 @@
 <html>
 <head>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true, theme: 'base', flowchart: {nodeSpacing: 40, rankSpacing: 50}});</script>
+    <script>mermaid.initialize({startOnLoad:true, theme: 'dark'});</script>
     <style>
-        body { 
-            background-color: #f5f5f5; 
-            color: #222; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            padding: 20px; 
-            line-height: 1.4;
-        }
-        h1 { 
-            text-align: center; 
-            color: #000; 
-            font-size: 1.6em;
-            margin-bottom: 8px;
-        }
-        .subtitle {
-            text-align: center; 
-            color: #555; 
-            font-size: 0.95em;
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-        .mermaid-container {
-            background: #fff;
-            padding: 15px;
-            border-radius: 6px;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-            overflow-x: auto;
-        }
-        .mermaid { font-size: 14px !important; }
+        body { background-color: #121212; color: #fff; font-family: sans-serif; padding: 20px; }
+        h1 { text-align: center; color: #fff; }
+        
+        /* Tactical Yellow styling for high emphasis labels */
+        .tacticalLabel { font-weight: bold; fill: #121212; }
+        .recttacticalLabel { fill: #ffcc00; stroke: #fff; stroke-width: 2px; }
+
+        /* Tactical Red styling for pretexts and ironies */
+        .ironyLabel { font-weight: bold; fill: #fff; }
+        .rectironyLabel { fill: #b30000; stroke: #fff; stroke-width: 3px; }
+
+        /* Dark styling for standard nodes */
+        .rectstandard { fill: #1e1e1e; stroke: #4a90e2; stroke-width: 2px; }
+        
+        /* Action node (Epic Fury) */
+        .actionNode { stroke: #ffcc00; stroke-width: 4px; fill: #000; color: #ffcc00; font-weight: bold; }
     </style>
 </head>
 <body>
-    <h1>404foundyou.org: ARCHITECTURE OF THE EXPERIMENT (1917-2026)</h1>
-    <p class="subtitle">'Native Americans worshipped the land; the Technocracy harvests the data from it.' – UNREDACTED (03/01/2026)</p>
+    <h1>404foundyou.org: THE ARCHITECTURE OF THE EXPERIMENT (1917-2026)</h1>
+    <p style="text-align: center; color: #888;">'Native Americans worshipped the land; the Technocracy harvests the data from it.' – UNREDACTED (03/01/2026)</p>
     
-    <div class="mermaid-container">
-        <div class="mermaid">
-%%{init: {'flowchart': {'htmlLabels': true, 'nodeSpacing': 35, 'rankSpacing': 45}}}%%
+<div class="mermaid">
 graph TD
-    classDef tactical fill:#FFD700,stroke:#333,stroke-width:2px,color:#000,font-weight:bold,font-size:13px;
-    classDef warning fill:#FF4444,stroke:#333,stroke-width:2px,color:#fff,font-weight:bold,font-size:13px;
-    classDef action fill:#22CC44,stroke:#333,stroke-width:3px,color:#000,font-weight:bold,font-size:13px;
-    classDef standard fill:#1E5BA8,stroke:#333,stroke-width:2px,color:#fff,font-weight:bold,font-size:12px;
-    classDef neutral fill:#555,stroke:#333,stroke-width:1px,color:#fff,font-size:12px;
+    %% Historical Geopolitical Roots (Left)
+    A[The 1917 Seed<br/>(Balfour to Rothschild)]:::rectstandard --> B[The UN Pivot<br/>(1947 Partition / Truman)]:::rectstandard
+    B -- Strategic Shift<br/>Post-Holocaust --> G[Establishment of Israel]:::rectstandard
 
-    A["1917 Seed<br/>Balfour"]:::standard --> B["UN Pivot<br/>1947"]:::standard
-    B -->|Strategic Shift| G["Israel<br/>Established"]:::standard
-    B --> C["US Executive Lab<br/>Technocracy"]:::standard
-    H{"Global<br/>Architects"}:::neutral --> C
+    %% Modern Power Management (Center)
+    B --> C[US Executive Lab<br/>(Technocracy Shift)]:::rectstandard
+    H{Global Management<br/>Architects} --> C
     
-    Bilder["Bilderberg"]:::neutral --> H
-    WEF["WEF/Schwab"]:::neutral --> H
-    KR["Kissinger/<br/>Rockefeller"]:::neutral --> H
+    %% Architects
+    Bilder[Bilderberg Group]:::rectstandard --> H
+    WEF[WEF / Klaus Schwab]:::rectstandard --> H
+    K/R[Kissinger/Rockefeller]:::rectstandard --> H
 
-    D["JAPAN<br/>US Debt Holder"]:::standard --> E["SoftBank<br/>Son"]:::standard
-    E -->|ARM Chips| Grid["PROJECT<br/>STARGATE<br/>2025"]:::action
+    %% The Computing Grid (Right)
+    D[JAPAN<br/>(Largest Foreign US Debt Holder)]:::rectstandard --> E[SoftBank<br/>(Masayoshi Son)]:::rectstandard
+    E -- Controls ARM Chips --> Grid[PROJECT STARGATE (2025)<br/>The New Grid]:::rectstandard
     
-    Grid -->|Compute| OAI["OpenAI/AGI"]:::standard
-    Grid -->|Azure| MS["Microsoft/OS"]:::standard
+    %% Stargate Partners
+    Grid -- Compute --> OAI[OpenAI / AGI Models]:::rectstandard
+    Grid -- Azure Cloud --> MS[Microsoft / OS]:::rectstandard
 
-    C --> Mil["US Military<br/>War Dept"]:::standard
+    %% The Pivot to Warfare (Path A vs B)
+    C --> Mil[US Military/War Dept<br/>(Pete Hegseth)]:::rectstandard
     
-    Mil -->|PATH A<br/>COMPLIANCE| Fury["Operation<br/>Epic Fury<br/>Feb 28"]:::action
+    %% Path A: Compliance
+    Mil -- PATH A<br/>(COMPLIANCE) --> Fury
+    
+    Fury((CURRENT ACTION:<br/>Operation Epic Fury<br/>Feb 28, 2026)):::actionNode
     OAI --> Fury
     MS --> Fury
 
-    Mil -->|PATH B<br/>PURGE| Claude["ANTHROPIC<br/>CLAUDE AI"]:::warning
+    %% Path B: The Ideological Purge (Claude) - HIGH EMPHASIS RED
+    Mil -- PATH B<br/>(IDEOLOGICAL PURGE) --> Claude
     
-    ClaudeRefusal["CEO AMODEI<br/>REFUSES<br/>Military Use"]:::tactical
-    ClaudeRefusal --> Claude
+    %% High-emphasis label above Anthropic
+    ClaudeRefusal(CEO DARIO AMODEI REFUSES MILITARY USE<br/>for Autonomous Weapons & Mass Surveillance):::recttacticalLabel --> Claude
     
-    Claude -->|CEO Refusal| Pretext{"THE<br/>PRETEXT"}:::warning
-    Pretext -->|Supply Chain| Exclusion["CLAUDE<br/>PURGED"]:::warning
+    Claude[ANTHROPIC / CLAUDE AI<br/>(Initially Deployed)]:::rectironyLabel 
     
-    IronyLabel["SUPPLY CHAIN<br/>MASKS<br/>IDEOLOGY"]:::tactical
-    IronyLabel -.->|Excuse| Exclusion
+    %% The Ironic Pretext
+    Claude -- CEO Refusal --> IronicPretext{THE RIDICULOUS PRETEXT}:::rectironyLabel
+    
+    IronicPretext -- Hegseth labels Claude a<br/>'Supply Chain Risk' to exclude them --> Exclusion[EXCLUSION<br/>(Claude Purged from Systems)]:::rectironyLabel
+    
+    %% The Irony Blurb
+    IronicBlurb[IRONIC PRETEXT:<br/>USED SUPPLY CHAIN<br/>TO MASK<br/>IDEOLOGICAL EXCLUSION]:::recttacticalLabel -.-> Exclusion
 
-    Grid --> Samsung["Samsung<br/>Big Tech"]:::standard
-    Samsung -->|Data License| Siphon["USER METADATA<br/>AGI Training"]:::warning
-    Siphon --> Pop["Population YOU"]:::warning
+    %% Data Siphoning (Bottom)
+    Grid --> Samsung[Samsung/Big Tech TOS<br/>(AI Enhanced Features)]:::rectstandard
+    Samsung -- Irrevocable License to Data --> Siphon[USER METADATA<br/>(AGI Training)]:::rectstandard
+    Siphon --> Pop[Population (You)]:::rectstandard
 
-    Aaron["Aaron Swartz<br/>Open Data"]:::neutral -.-> Contrast["THE IRONIC<br/>CONTRAST"]:::tactical
-    Grid -.-> Scraping["Stargate<br/>Web Scraping"]:::neutral
+    %% The Contrast (Bottom Right)
+    Aaron[Aaron Swartz<br/>(Persecuted for Open Data)]:::rectstandard -.-> Contrast[THE CONTRAST]:::rectstandard
+    Grid -.-> Scraping[Stargate<br/>(Scraping Web for Private Profit)]:::rectstandard
     Scraping -.-> Contrast
-        </div>
-    </div>
+
+    %% Styling for High Emphasis and Red/Yellow
+    classDef recttacticalLabel fill:#ffcc00,stroke:#fff,stroke-width:2px,color:#121212,font-weight:bold;
+    classDef rectironyLabel fill:#b30000,stroke:#fff,stroke-width:3px,color:#fff,font-weight:bold;
+    classDef actionNode stroke:#ffcc00,stroke-width:4px,fill:#000,color:#ffcc00,font-weight:bold;
+    classDef rectstandard fill:#1e1e1e,stroke:#4a90e2,stroke-width:2px,color:#fff;
+</div>
 </body>
 </html>
