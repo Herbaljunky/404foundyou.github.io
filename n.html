@@ -2,92 +2,104 @@
 <html>
 <head>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true, theme: 'dark'});</script>
+    <script>mermaid.initialize({startOnLoad:true, theme: 'base'});</script>
     <style>
-        body { background-color: #121212; color: #fff; font-family: sans-serif; padding: 20px; }
-        h1 { text-align: center; color: #fff; }
-        
-        /* Tactical Yellow styling for high emphasis labels */
-        .tacticalLabel { font-weight: bold; fill: #121212; }
-        .recttacticalLabel { fill: #ffcc00; stroke: #fff; stroke-width: 2px; }
-
-        /* Tactical Red styling for pretexts and ironies */
-        .ironyLabel { font-weight: bold; fill: #fff; }
-        .rectironyLabel { fill: #b30000; stroke: #fff; stroke-width: 3px; }
-
-        /* Dark styling for standard nodes */
-        .rectstandard { fill: #1e1e1e; stroke: #4a90e2; stroke-width: 2px; }
-        
-        /* Action node (Epic Fury) */
-        .actionNode { stroke: #ffcc00; stroke-width: 4px; fill: #000; color: #ffcc00; font-weight: bold; }
+        body { 
+            background-color: #f5f5f5; 
+            color: #222; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            padding: 30px; 
+            line-height: 1.6;
+        }
+        h1 { 
+            text-align: center; 
+            color: #1a1a1a; 
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center; 
+            color: #666; 
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        .mermaid-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
     <h1>404foundyou.org: THE ARCHITECTURE OF THE EXPERIMENT (1917-2026)</h1>
-    <p style="text-align: center; color: #888;">'Native Americans worshipped the land; the Technocracy harvests the data from it.' – UNREDACTED (03/01/2026)</p>
+    <p class="subtitle">'Native Americans worshipped the land; the Technocracy harvests the data from it.' – UNREDACTED (03/01/2026)</p>
     
-<div class="mermaid">
+    <div class="mermaid-container">
+        <div class="mermaid">
 %%{init: {'flowchart': {'htmlLabels': true}}}%%
 graph TD
-    classDef recttacticalLabel fill:#ffcc00,stroke:#fff,stroke-width:2px,color:#121212,font-weight:bold;
-    classDef rectironyLabel fill:#b30000,stroke:#fff,stroke-width:3px,color:#fff,font-weight:bold;
-    classDef actionNode stroke:#ffcc00,stroke-width:4px,fill:#000,color:#ffcc00,font-weight:bold;
-    classDef rectstandard fill:#1e1e1e,stroke:#4a90e2,stroke-width:2px,color:#fff;
+    classDef tactical fill:#FFD700,stroke:#000,stroke-width:3px,color:#000,font-weight:bold;
+    classDef warning fill:#FF6B6B,stroke:#000,stroke-width:3px,color:#fff,font-weight:bold;
+    classDef action fill:#2ecc71,stroke:#000,stroke-width:4px,color:#000,font-weight:bold;
+    classDef standard fill:#3498db,stroke:#000,stroke-width:2px,color:#fff,font-weight:bold;
+    classDef neutral fill:#ecf0f1,stroke:#34495e,stroke-width:2px,color:#000;
 
-    %% Historical Geopolitical Roots (Left)
-    A["The 1917 Seed<br/>(Balfour to Rothschild)"]:::rectstandard --> B["The UN Pivot<br/>(1947 Partition / Truman)"]:::rectstandard
-    B -- "Strategic Shift<br/>Post-Holocaust" --> G["Establishment of Israel"]:::rectstandard
+    %% Historical Roots
+    A["<b>1917 Seed</b><br/>Balfour to Rothschild"]:::standard --> B["<b>UN Pivot</b><br/>1947 Partition/Truman"]:::standard
+    B -->|Strategic Shift<br/>Post-Holocaust| G["<b>Israel Established</b>"]:::standard
 
-    %% Modern Power Management (Center)
-    B --> C["US Executive Lab<br/>(Technocracy Shift)"]:::rectstandard
-    H{"Global Management<br/>Architects"} --> C
+    %% Power Management
+    B --> C["<b>US Executive Lab</b><br/>Technocracy Shift"]:::standard
+    H{"<b>Global Management<br/>Architects</b>"}:::neutral --> C
     
     %% Architects
-    Bilder["Bilderberg Group"]:::rectstandard --> H
-    WEF["WEF / Klaus Schwab"]:::rectstandard --> H
-    K_R["Kissinger/Rockefeller"]:::rectstandard --> H
+    Bilder["Bilderberg Group"]:::neutral --> H
+    WEF["WEF/Klaus Schwab"]:::neutral --> H
+    KR["Kissinger/Rockefeller"]:::neutral --> H
 
-    %% The Computing Grid (Right)
-    D["JAPAN<br/>(Largest Foreign US Debt Holder)"]:::rectstandard --> E["SoftBank<br/>(Masayoshi Son)"]:::rectstandard
-    E -- "Controls ARM Chips" --> Grid["PROJECT STARGATE 2025<br/>The New Grid"]:::rectstandard
+    %% Computing Grid
+    D["<b>JAPAN</b><br/>Largest Foreign US Debt Holder"]:::standard --> E["<b>SoftBank</b><br/>Masayoshi Son"]:::standard
+    E -->|Controls ARM Chips| Grid["<b>PROJECT STARGATE 2025</b><br/>The New Grid"]:::action
     
     %% Stargate Partners
-    Grid -- "Compute" --> OAI["OpenAI / AGI Models"]:::rectstandard
-    Grid -- "Azure Cloud" --> MS["Microsoft / OS"]:::rectstandard
+    Grid -->|Compute| OAI["<b>OpenAI/AGI Models</b>"]:::standard
+    Grid -->|Azure Cloud| MS["<b>Microsoft/OS</b>"]:::standard
 
-    %% The Pivot to Warfare (Path A vs B)
-    C --> Mil["US Military/War Dept<br/>(Pete Hegseth)"]:::rectstandard
+    %% Military Path
+    C --> Mil["<b>US Military/War Dept</b><br/>Pete Hegseth"]:::standard
     
-    %% Path A: Compliance
-    Mil -- "PATH A<br/>COMPLIANCE" --> Fury["CURRENT ACTION:<br/>Operation Epic Fury<br/>Feb 28, 2026"]:::actionNode
+    %% PATH A: Compliance
+    Mil -->|PATH A: COMPLIANCE| Fury["<b>CURRENT ACTION</b><br/>Operation Epic Fury<br/>Feb 28, 2026"]:::action
     OAI --> Fury
     MS --> Fury
 
-    %% Path B: The Ideological Purge (Claude) - HIGH EMPHASIS RED
-    Mil -- "PATH B<br/>IDEOLOGICAL PURGE" --> Claude["ANTHROPIC / CLAUDE AI<br/>Initially Deployed"]:::rectironyLabel
+    %% PATH B: Ideological Purge
+    Mil -->|PATH B: IDEOLOGICAL PURGE| Claude["<b>ANTHROPIC/CLAUDE AI</b><br/>Initially Deployed"]:::warning
     
-    %% High-emphasis label - CEO Refusal
-    ClaudeRefusal["CEO DARIO AMODEI REFUSES MILITARY USE<br/>for Autonomous Weapons & Mass Surveillance"]:::recttacticalLabel
+    %% CEO Refusal - HIGH EMPHASIS
+    ClaudeRefusal["⚠️ <b>CEO DARIO AMODEI REFUSES</b><br/>Military Use for Autonomous Weapons<br/>& Mass Surveillance"]:::tactical
     ClaudeRefusal --> Claude
     
-    %% The Ironic Pretext
-    Claude -- "CEO Refusal" --> IronicPretext{"THE RIDICULOUS PRETEXT"}:::rectironyLabel
+    %% The Pretext
+    Claude -->|CEO Refusal| Pretext{"<b>THE PRETEXT</b>"}:::warning
     
-    IronicPretext -- "Hegseth labels Claude a<br/>Supply Chain Risk to exclude them" --> Exclusion["EXCLUSION<br/>Claude Purged from Systems"]:::rectironyLabel
+    Pretext -->|Labeled 'Supply Chain Risk'| Exclusion["<b>CLAUDE PURGED</b><br/>From Systems"]:::warning
     
-    %% The Irony Blurb
-    IronicBlurb["IRONIC PRETEXT:<br/>USED SUPPLY CHAIN<br/>TO MASK<br/>IDEOLOGICAL EXCLUSION"]:::recttacticalLabel
-    IronicBlurb -.-> Exclusion
+    %% Irony Label
+    IronyLabel["🔴 <b>SUPPLY CHAIN EXCUSE</b><br/>MASKS IDEOLOGICAL EXCLUSION"]:::tactical
+    IronyLabel -.->|Pretext| Exclusion
 
-    %% Data Siphoning (Bottom)
-    Grid --> Samsung["Samsung/Big Tech TOS<br/>AI Enhanced Features"]:::rectstandard
-    Samsung -- "Irrevocable License to Data" --> Siphon["USER METADATA<br/>AGI Training"]:::rectstandard
-    Siphon --> Pop["Population You"]:::rectstandard
+    %% Data Siphoning
+    Grid --> Samsung["<b>Samsung/Big Tech TOS</b><br/>AI Enhanced Features"]:::standard
+    Samsung -->|Irrevocable Data License| Siphon["<b>USER METADATA</b><br/>AGI Training"]:::warning
+    Siphon --> Pop["<b>Population YOU</b>"]:::warning
 
-    %% The Contrast (Bottom Right)
-    Aaron["Aaron Swartz<br/>Persecuted for Open Data"]:::rectstandard -.-> Contrast["THE CONTRAST"]:::rectstandard
-    Grid -.-> Scraping["Stargate<br/>Scraping Web for Private Profit"]:::rectstandard
+    %% The Contrast
+    Aaron["Aaron Swartz<br/>Persecuted for Open Data"]:::neutral -.-> Contrast["<b>THE IRONIC CONTRAST</b>"]:::tactical
+    Grid -.-> Scraping["Stargate Scraping Web<br/>for Private Profit"]:::neutral
     Scraping -.-> Contrast
-</div>
+        </div>
+    </div>
 </body>
 </html>
