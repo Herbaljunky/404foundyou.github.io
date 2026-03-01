@@ -39,11 +39,11 @@ graph TD
     %% Architects
     Bilder[Bilderberg Group]:::rectstandard --> H
     WEF[WEF / Klaus Schwab]:::rectstandard --> H
-    K/R[Kissinger/Rockefeller]:::rectstandard --> H
+    K_R[Kissinger/Rockefeller]:::rectstandard --> H
 
     %% The Computing Grid (Right)
     D[JAPAN<br/>(Largest Foreign US Debt Holder)]:::rectstandard --> E[SoftBank<br/>(Masayoshi Son)]:::rectstandard
-    E -- Controls ARM Chips --> Grid[PROJECT STARGATE (2025)<br/>The New Grid]:::rectstandard
+    E -- Controls ARM Chips --> Grid[PROJECT STARGATE 2025<br/>The New Grid]:::rectstandard
     
     %% Stargate Partners
     Grid -- Compute --> OAI[OpenAI / AGI Models]:::rectstandard
@@ -53,36 +53,38 @@ graph TD
     C --> Mil[US Military/War Dept<br/>(Pete Hegseth)]:::rectstandard
     
     %% Path A: Compliance
-    Mil -- PATH A<br/>(COMPLIANCE) --> Fury
+    Mil -- PATH A<br/>COMPLIANCE --> Fury
     
     Fury((CURRENT ACTION:<br/>Operation Epic Fury<br/>Feb 28, 2026)):::actionNode
     OAI --> Fury
     MS --> Fury
 
     %% Path B: The Ideological Purge (Claude) - HIGH EMPHASIS RED
-    Mil -- PATH B<br/>(IDEOLOGICAL PURGE) --> Claude
+    Mil -- PATH B<br/>IDEOLOGICAL PURGE --> Claude
     
-    %% High-emphasis label above Anthropic
-    ClaudeRefusal(CEO DARIO AMODEI REFUSES MILITARY USE<br/>for Autonomous Weapons & Mass Surveillance):::recttacticalLabel --> Claude
+    %% High-emphasis label - CEO Refusal
+    ClaudeRefusal[CEO DARIO AMODEI REFUSES MILITARY USE<br/>for Autonomous Weapons & Mass Surveillance]:::recttacticalLabel
+    ClaudeRefusal --> Claude
     
-    Claude[ANTHROPIC / CLAUDE AI<br/>(Initially Deployed)]:::rectironyLabel 
+    Claude[ANTHROPIC / CLAUDE AI<br/>Initially Deployed]:::rectironyLabel 
     
     %% The Ironic Pretext
     Claude -- CEO Refusal --> IronicPretext{THE RIDICULOUS PRETEXT}:::rectironyLabel
     
-    IronicPretext -- Hegseth labels Claude a<br/>'Supply Chain Risk' to exclude them --> Exclusion[EXCLUSION<br/>(Claude Purged from Systems)]:::rectironyLabel
+    IronicPretext -- Hegseth labels Claude a<br/>Supply Chain Risk to exclude them --> Exclusion[EXCLUSION<br/>Claude Purged from Systems]:::rectironyLabel
     
     %% The Irony Blurb
-    IronicBlurb[IRONIC PRETEXT:<br/>USED SUPPLY CHAIN<br/>TO MASK<br/>IDEOLOGICAL EXCLUSION]:::recttacticalLabel -.-> Exclusion
+    IronicBlurb[IRONIC PRETEXT:<br/>USED SUPPLY CHAIN<br/>TO MASK<br/>IDEOLOGICAL EXCLUSION]:::recttacticalLabel
+    IronicBlurb -.-> Exclusion
 
     %% Data Siphoning (Bottom)
-    Grid --> Samsung[Samsung/Big Tech TOS<br/>(AI Enhanced Features)]:::rectstandard
-    Samsung -- Irrevocable License to Data --> Siphon[USER METADATA<br/>(AGI Training)]:::rectstandard
-    Siphon --> Pop[Population (You)]:::rectstandard
+    Grid --> Samsung[Samsung/Big Tech TOS<br/>AI Enhanced Features]:::rectstandard
+    Samsung -- Irrevocable License to Data --> Siphon[USER METADATA<br/>AGI Training]:::rectstandard
+    Siphon --> Pop[Population You]:::rectstandard
 
     %% The Contrast (Bottom Right)
-    Aaron[Aaron Swartz<br/>(Persecuted for Open Data)]:::rectstandard -.-> Contrast[THE CONTRAST]:::rectstandard
-    Grid -.-> Scraping[Stargate<br/>(Scraping Web for Private Profit)]:::rectstandard
+    Aaron[Aaron Swartz<br/>Persecuted for Open Data]:::rectstandard -.-> Contrast[THE CONTRAST]:::rectstandard
+    Grid -.-> Scraping[Stargate<br/>Scraping Web for Private Profit]:::rectstandard
     Scraping -.-> Contrast
 
     %% Styling for High Emphasis and Red/Yellow
