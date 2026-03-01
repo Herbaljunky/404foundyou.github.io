@@ -2,102 +2,90 @@
 <html>
 <head>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true, theme: 'base'});</script>
+    <script>mermaid.initialize({startOnLoad:true, theme: 'base', flowchart: {nodeSpacing: 40, rankSpacing: 50}});</script>
     <style>
         body { 
             background-color: #f5f5f5; 
             color: #222; 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            padding: 30px; 
-            line-height: 1.6;
+            padding: 20px; 
+            line-height: 1.4;
         }
         h1 { 
             text-align: center; 
-            color: #1a1a1a; 
-            font-size: 2em;
-            margin-bottom: 10px;
+            color: #000; 
+            font-size: 1.6em;
+            margin-bottom: 8px;
         }
         .subtitle {
             text-align: center; 
-            color: #666; 
+            color: #555; 
+            font-size: 0.95em;
             font-style: italic;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         .mermaid-container {
             background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+            overflow-x: auto;
         }
+        .mermaid { font-size: 14px !important; }
     </style>
 </head>
 <body>
-    <h1>404foundyou.org: THE ARCHITECTURE OF THE EXPERIMENT (1917-2026)</h1>
+    <h1>404foundyou.org: ARCHITECTURE OF THE EXPERIMENT (1917-2026)</h1>
     <p class="subtitle">'Native Americans worshipped the land; the Technocracy harvests the data from it.' – UNREDACTED (03/01/2026)</p>
     
     <div class="mermaid-container">
         <div class="mermaid">
-%%{init: {'flowchart': {'htmlLabels': true}}}%%
+%%{init: {'flowchart': {'htmlLabels': true, 'nodeSpacing': 35, 'rankSpacing': 45}}}%%
 graph TD
-    classDef tactical fill:#FFD700,stroke:#000,stroke-width:3px,color:#000,font-weight:bold;
-    classDef warning fill:#FF6B6B,stroke:#000,stroke-width:3px,color:#fff,font-weight:bold;
-    classDef action fill:#2ecc71,stroke:#000,stroke-width:4px,color:#000,font-weight:bold;
-    classDef standard fill:#3498db,stroke:#000,stroke-width:2px,color:#fff,font-weight:bold;
-    classDef neutral fill:#ecf0f1,stroke:#34495e,stroke-width:2px,color:#000;
+    classDef tactical fill:#FFD700,stroke:#333,stroke-width:2px,color:#000,font-weight:bold,font-size:13px;
+    classDef warning fill:#FF4444,stroke:#333,stroke-width:2px,color:#fff,font-weight:bold,font-size:13px;
+    classDef action fill:#22CC44,stroke:#333,stroke-width:3px,color:#000,font-weight:bold,font-size:13px;
+    classDef standard fill:#1E5BA8,stroke:#333,stroke-width:2px,color:#fff,font-weight:bold,font-size:12px;
+    classDef neutral fill:#555,stroke:#333,stroke-width:1px,color:#fff,font-size:12px;
 
-    %% Historical Roots
-    A["<b>1917 Seed</b><br/>Balfour to Rothschild"]:::standard --> B["<b>UN Pivot</b><br/>1947 Partition/Truman"]:::standard
-    B -->|Strategic Shift<br/>Post-Holocaust| G["<b>Israel Established</b>"]:::standard
-
-    %% Power Management
-    B --> C["<b>US Executive Lab</b><br/>Technocracy Shift"]:::standard
-    H{"<b>Global Management<br/>Architects</b>"}:::neutral --> C
+    A["1917 Seed<br/>Balfour"]:::standard --> B["UN Pivot<br/>1947"]:::standard
+    B -->|Strategic Shift| G["Israel<br/>Established"]:::standard
+    B --> C["US Executive Lab<br/>Technocracy"]:::standard
+    H{"Global<br/>Architects"}:::neutral --> C
     
-    %% Architects
-    Bilder["Bilderberg Group"]:::neutral --> H
-    WEF["WEF/Klaus Schwab"]:::neutral --> H
-    KR["Kissinger/Rockefeller"]:::neutral --> H
+    Bilder["Bilderberg"]:::neutral --> H
+    WEF["WEF/Schwab"]:::neutral --> H
+    KR["Kissinger/<br/>Rockefeller"]:::neutral --> H
 
-    %% Computing Grid
-    D["<b>JAPAN</b><br/>Largest Foreign US Debt Holder"]:::standard --> E["<b>SoftBank</b><br/>Masayoshi Son"]:::standard
-    E -->|Controls ARM Chips| Grid["<b>PROJECT STARGATE 2025</b><br/>The New Grid"]:::action
+    D["JAPAN<br/>US Debt Holder"]:::standard --> E["SoftBank<br/>Son"]:::standard
+    E -->|ARM Chips| Grid["PROJECT<br/>STARGATE<br/>2025"]:::action
     
-    %% Stargate Partners
-    Grid -->|Compute| OAI["<b>OpenAI/AGI Models</b>"]:::standard
-    Grid -->|Azure Cloud| MS["<b>Microsoft/OS</b>"]:::standard
+    Grid -->|Compute| OAI["OpenAI/AGI"]:::standard
+    Grid -->|Azure| MS["Microsoft/OS"]:::standard
 
-    %% Military Path
-    C --> Mil["<b>US Military/War Dept</b><br/>Pete Hegseth"]:::standard
+    C --> Mil["US Military<br/>War Dept"]:::standard
     
-    %% PATH A: Compliance
-    Mil -->|PATH A: COMPLIANCE| Fury["<b>CURRENT ACTION</b><br/>Operation Epic Fury<br/>Feb 28, 2026"]:::action
+    Mil -->|PATH A<br/>COMPLIANCE| Fury["Operation<br/>Epic Fury<br/>Feb 28"]:::action
     OAI --> Fury
     MS --> Fury
 
-    %% PATH B: Ideological Purge
-    Mil -->|PATH B: IDEOLOGICAL PURGE| Claude["<b>ANTHROPIC/CLAUDE AI</b><br/>Initially Deployed"]:::warning
+    Mil -->|PATH B<br/>PURGE| Claude["ANTHROPIC<br/>CLAUDE AI"]:::warning
     
-    %% CEO Refusal - HIGH EMPHASIS
-    ClaudeRefusal["⚠️ <b>CEO DARIO AMODEI REFUSES</b><br/>Military Use for Autonomous Weapons<br/>& Mass Surveillance"]:::tactical
+    ClaudeRefusal["CEO AMODEI<br/>REFUSES<br/>Military Use"]:::tactical
     ClaudeRefusal --> Claude
     
-    %% The Pretext
-    Claude -->|CEO Refusal| Pretext{"<b>THE PRETEXT</b>"}:::warning
+    Claude -->|CEO Refusal| Pretext{"THE<br/>PRETEXT"}:::warning
+    Pretext -->|Supply Chain| Exclusion["CLAUDE<br/>PURGED"]:::warning
     
-    Pretext -->|Labeled 'Supply Chain Risk'| Exclusion["<b>CLAUDE PURGED</b><br/>From Systems"]:::warning
-    
-    %% Irony Label
-    IronyLabel["🔴 <b>SUPPLY CHAIN EXCUSE</b><br/>MASKS IDEOLOGICAL EXCLUSION"]:::tactical
-    IronyLabel -.->|Pretext| Exclusion
+    IronyLabel["SUPPLY CHAIN<br/>MASKS<br/>IDEOLOGY"]:::tactical
+    IronyLabel -.->|Excuse| Exclusion
 
-    %% Data Siphoning
-    Grid --> Samsung["<b>Samsung/Big Tech TOS</b><br/>AI Enhanced Features"]:::standard
-    Samsung -->|Irrevocable Data License| Siphon["<b>USER METADATA</b><br/>AGI Training"]:::warning
-    Siphon --> Pop["<b>Population YOU</b>"]:::warning
+    Grid --> Samsung["Samsung<br/>Big Tech"]:::standard
+    Samsung -->|Data License| Siphon["USER METADATA<br/>AGI Training"]:::warning
+    Siphon --> Pop["Population YOU"]:::warning
 
-    %% The Contrast
-    Aaron["Aaron Swartz<br/>Persecuted for Open Data"]:::neutral -.-> Contrast["<b>THE IRONIC CONTRAST</b>"]:::tactical
-    Grid -.-> Scraping["Stargate Scraping Web<br/>for Private Profit"]:::neutral
+    Aaron["Aaron Swartz<br/>Open Data"]:::neutral -.-> Contrast["THE IRONIC<br/>CONTRAST"]:::tactical
+    Grid -.-> Scraping["Stargate<br/>Web Scraping"]:::neutral
     Scraping -.-> Contrast
         </div>
     </div>
